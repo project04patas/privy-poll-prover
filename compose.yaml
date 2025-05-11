@@ -1,0 +1,11 @@
+# rofl-service/compose.yaml
+# version: '3.8' # This line is optional with modern Docker Compose
+
+services:
+  privypoll-app: # Name of our application service
+    build:
+      context: . # Build from the current directory (rofl-service/)
+      dockerfile: Dockerfile # Using our Dockerfile
+    volumes:
+      # This makes the Appd socket available inside our container
+      - /run/rofl-appd.sock:/run/rofl-appd.sock

@@ -1,0 +1,1 @@
+httpx[http2,brotli]>=0.23.0,<1.0.0
